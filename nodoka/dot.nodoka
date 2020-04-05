@@ -4,40 +4,40 @@
 #
 # Modify by applet on 2010-03-29
 
-# ‚Ü‚¸ƒL[ƒ{[ƒh’è‹`‚ğ“Ç‚İ‚ŞB
+# ã¾ãšã‚­ãƒ¼ãƒœãƒ¼ãƒ‰å®šç¾©ã‚’èª­ã¿è¾¼ã‚€ã€‚
 if ( USE104 )
-  include "104.nodoka"			# 104 ƒL[ƒ{[ƒhİ’è
+  include "104.nodoka"			# 104 ã‚­ãƒ¼ãƒœãƒ¼ãƒ‰è¨­å®š
   if ( USE109on104 )
-    include "109on104.nodoka"		# 104 ƒL[ƒ{[ƒh‚ğ 109 ƒL[ƒ{[ƒh•—‚É
+    include "109on104.nodoka"		# 104 ã‚­ãƒ¼ãƒœãƒ¼ãƒ‰ã‚’ 109 ã‚­ãƒ¼ãƒœãƒ¼ãƒ‰é¢¨ã«
     key GraveAccent = M-GraveAccent
   endif
 else
-  include "109.nodoka"			# 109 ƒL[ƒ{[ƒhİ’è
+  include "109.nodoka"			# 109 ã‚­ãƒ¼ãƒœãƒ¼ãƒ‰è¨­å®š
   if ( USE104on109 )
-    include "104on109.nodoka"		# 109 ƒL[ƒ{[ƒh‚ğ 104 ƒL[ƒ{[ƒh•—‚É
+    include "104on109.nodoka"		# 109 ã‚­ãƒ¼ãƒœãƒ¼ãƒ‰ã‚’ 104 ã‚­ãƒ¼ãƒœãƒ¼ãƒ‰é¢¨ã«
   endif
 endif
 
+# è¤‡æ•°ã‚­ãƒ¼ãƒœãƒ¼ãƒ‰åˆ¤å®šç”¨
+include "keyboard.nodoka"
 
-# Global keymap İ’è
+# Global keymap è¨­å®š
 keymap Global
 
-
-
-# ˆÈ‰º‚ÉA‚²©g‚Ìİ’è‚ğŒä‘‚«‰º‚³‚¢B
+# ä»¥ä¸‹ã«ã€ã”è‡ªèº«ã®è¨­å®šã‚’å¾¡æ›¸ãä¸‹ã•ã„ã€‚
 if (USEHHKB)
-    #ƒz[ƒ€ƒ|ƒWƒVƒ‡ƒ“‚©‚ç‚ÌƒL[‘€ì‘Î‰
-    key *NumSolidus = *Down
-    key *PageUp = *Right
-    key *Home = *Up
-    key *Down = *PageDown
-    key *Up = *PageUp
-    key *NumPlusSign = *$ToggleIME
-    key *NumAsterisk = *Left
-    key *PrintScreen = *Home
-    key *Left = *End
+    #ãƒ›ãƒ¼ãƒ ãƒã‚¸ã‚·ãƒ§ãƒ³ã‹ã‚‰ã®ã‚­ãƒ¼æ“ä½œå¯¾å¿œ
+    key K1-*NumSolidus = *Down
+    key K1-*PageUp = *Right
+    key K1-*Home = *Up
+    key K1-*Down = *PageDown
+    key K1-*Up = *PageUp
+    key K1-*NumPlusSign = *$ToggleIME
+    key K1-*NumAsterisk = *Left
+    key K1-*PrintScreen = *Home
+    key K1-*Left = *End
 
-    #VirtualPC—p(IME•ÏŠ·ƒL[‚ª‚í‚½‚Á‚Ä‚¢‚È‚¢‚½‚ß•Ê‚ÌƒL[‚ğ—˜—p)
+    #VirtualPCç”¨(IMEå¤‰æ›ã‚­ãƒ¼ãŒã‚ãŸã£ã¦ã„ãªã„ãŸã‚åˆ¥ã®ã‚­ãƒ¼ã‚’åˆ©ç”¨)
     window VirtualPC /VMWindow\.exe/ : Global
-    key *NumPlusSign = *Insert
+    key K1-*NumPlusSign = *Insert
 endif

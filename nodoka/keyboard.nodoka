@@ -1,0 +1,14 @@
+# 複数キーボード判定用
+def option FakeUp = enable 20 84
+
+# デバイスのID調査用に、一時的に有効にする
+# def option UnitID = K1 0 0 0
+
+# 目的のキーボードのIDが分かったらこの行に記入
+# (先頭のK1はそのまま)
+def option UnitID = K1 2131 256 0
+
+# テンキー:current device name:\\?\HID#VID_0853&PID_0117#7&11fa5527&0&0000#{884b96c3-56ef-11d1-bc8c-00a0c91405dd}
+# def option UnitID = Kx 2131 279 0
+# HHKB: current device name:\\?\HID#VID_0853&PID_0100#7&6a4f2b8&0&0000#{884b96c3-56ef-11d1-bc8c-00a0c91405dd}
+# def option UnitID = Kx 2131 256 0
