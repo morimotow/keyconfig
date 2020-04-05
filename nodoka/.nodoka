@@ -1,0 +1,43 @@
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Nodoka - dotjp.nodoka
+# Copyright (C) 1999-2005, TAGA Nayuta <nayuta@users.sourceforge.net>
+#
+# Modify by applet on 2010-03-29
+
+# まずキーボード定義を読み込む。
+if ( USE104 )
+  include "104.nodoka"			# 104 キーボード設定
+  if ( USE109on104 )
+    include "109on104.nodoka"		# 104 キーボードを 109 キーボード風に
+    key GraveAccent = M-GraveAccent
+  endif
+else
+  include "109.nodoka"			# 109 キーボード設定
+  if ( USE104on109 )
+    include "104on109.nodoka"		# 109 キーボードを 104 キーボード風に
+  endif
+endif
+
+
+# Global keymap 設定
+keymap Global
+
+
+
+# 以下に、ご自身の設定を御書き下さい。
+if (USEHHKB)
+    #ホームポジションからのキー操作対応
+    key *NumSolidus = *Down
+    key *PageUp = *Right
+    key *Home = *Up
+    key *Down = *PageDown
+    key *Up = *PageUp
+    key *NumPlusSign = *$ToggleIME
+    key *NumAsterisk = *Left
+    key *PrintScreen = *Home
+    key *Left = *End
+
+    #VirtualPC用(IME変換キーがわたっていないため別のキーを利用)
+    window VirtualPC /VMWindow\.exe/ : Global
+    key *NumPlusSign = *Insert
+endif
