@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<root>
+	<appdef>
+		<appname>VBOXVM</appname>
+		<equal>org.virtualbox.app.VirtualBoxVM</equal>
+	</appdef>
+	<item>
+		<name>HHKB Private Cursor</name>
+		<identifier>private.hhkb_num_cursor</identifier>
+		<autogen>__KeyToKey__ KeyCode::KEYPAD_SLASH, KeyCode::CURSOR_DOWN</autogen>
+		<autogen>__KeyToKey__ KeyCode::PAGEUP, KeyCode::CURSOR_RIGHT</autogen>
+		<autogen>__KeyToKey__ KeyCode::HOME, KeyCode::CURSOR_UP</autogen>
+		<autogen>__KeyToKey__ KeyCode::KEYPAD_MULTIPLY, KeyCode::CURSOR_LEFT</autogen>
+		<autogen>__KeyToKey__ KeyCode::PC_PRINTSCREEN, KeyCode::HOME</autogen>
+		<autogen>__KeyToKey__ KeyCode::CURSOR_LEFT, KeyCode::END</autogen>
+		<autogen>__KeyToKey__ KeyCode::CURSOR_DOWN, KeyCode::PAGEDOWN</autogen>
+		<autogen>__KeyToKey__ KeyCode::CURSOR_UP, KeyCode::PAGEUP</autogen>
+	</item>
+	<item>
+		<name>HHKB Private ime</name>
+		<identifier>private.hhkb_ime_plus</identifier>
+		<autogen>__KeyToKey__ KeyCode::KEYPAD_PLUS, KeyCode::VK_JIS_TOGGLE_EISUU_KANA</autogen>
+	</item>
+	<item>
+		<name>macos ime(Fn + n)</name>
+		<not>VBOXVM</not>
+		<identifier>private.mac_ime_n</identifier>
+		<autogen>__KeyToKey__ KeyCode::N, ModifierFlag::FN, KeyCode::VK_JIS_TOGGLE_EISUU_KANA</autogen>
+	</item>
+	<item>
+		<name>macos home end(Fn + g;/[)</name>
+		<identifier>private.mac_cursor_homeend</identifier>
+		<autogen>__KeyToKey__ KeyCode::G, ModifierFlag::FN, KeyCode::HOME</autogen>
+		<autogen>__KeyToKey__ KeyCode::SEMICOLON, ModifierFlag::FN, KeyCode::END</autogen>
+		<autogen>__KeyToKey__ KeyCode::SLASH, ModifierFlag::FN, KeyCode::PAGEDOWN</autogen>
+		<autogen>__KeyToKey__ KeyCode::BRACKET_LEFT, ModifierFlag::FN, KeyCode::PAGEUP</autogen>
+	</item>
+	<item>
+		<name>macos virtualbox ime(Fn + n)</name>
+		<identifier>private.mac_vbox_ime</identifier>
+		<only>VBOXVM</only>
+		<autogen>__KeyToKey__ KeyCode::N, ModifierFlag::FN, KeyCode::BACKQUOTE, ModifierFlag::OPTION_L</autogen>
+	</item>
+
+</root>
