@@ -19,6 +19,8 @@ else
 endif
 
 # 複数キーボード判定用
+def option FakeUp = enable 20 84
+def option FakeUp = enable 20 84
 include "keyboard.nodoka"
 
 # Global keymap 設定

@@ -1,5 +1,4 @@
 # 複数キーボード判定用
-def option FakeUp = enable 20 84
 
 # デバイスのID調査用に、一時的に有効にする
 # def option UnitID = K1 0 0 0
