@@ -19,6 +19,7 @@ else
 endif
 
 # 複数キーボード判定用
+def option FakeUp = enable 20 84
 include "keyboard.nodoka"
 
 # Global keymap 設定
@@ -37,7 +38,4 @@ if (USEHHKB)
     key K1-*PrintScreen = *Home
     key K1-*Left = *End
 
-    #VirtualPC用(IME変換キーがわたっていないため別のキーを利用)
-    window VirtualPC /VMWindow\.exe/ : Global
-    key K1-*NumPlusSign = *Insert
 endif
